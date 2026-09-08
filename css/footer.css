@@ -547,6 +547,11 @@ footer .footer-text{
 
   #mobile-menu .cta-btn,
   #site-header nav.mobile-nav-open + .cta-btn{ background:linear-gradient(135deg,#d8e39a,var(--moss)) !important;color:var(--ink) !important; }
+
+  /* Hide CONTACT US button on mobile */
+  #site-header > a.cta-btn {
+    display: none !important;
+  }
 }
 
 @media(max-width:767px){
