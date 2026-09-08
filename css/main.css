@@ -1,0 +1,101 @@
+/* ═══════════════════════════════════════════════════════════════
+   ARCA — SHARED DESIGN SYSTEM (main.css)
+   Satu sumber kebenaran untuk token, state, dan polish global.
+   Dimuat SETELAH css/footer.css dan SEBELUM <style> halaman,
+   sehingga style spesifik halaman tetap bisa menimpa bila perlu.
+   ═══════════════════════════════════════════════════════════════ */
+
+:root{
+  /* ── Skala radius (kontrak: hanya 4 pilihan ini) ── */
+  --arc-radius-sm: 0.5rem;      /* input, chip kecil          */
+  --arc-radius-md: 1rem;        /* kartu, panel               */
+  --arc-radius-lg: 1.75rem;     /* section container          */
+  --arc-radius-pill: 9999px;    /* tombol & badge             */
+
+  /* ── Skala spacing (basis 4) ── */
+  --arc-space-1: 0.25rem;
+  --arc-space-2: 0.5rem;
+  --arc-space-3: 0.75rem;
+  --arc-space-4: 1rem;
+  --arc-space-6: 1.5rem;
+  --arc-space-8: 2rem;
+  --arc-space-12: 3rem;
+  --arc-space-16: 4rem;
+
+  /* ── Motion: kurva easing resmi ARCA ── */
+  --arc-ease-out: cubic-bezier(.16, 1, .3, 1);
+  --arc-ease-soft: cubic-bezier(.2, .8, .2, 1);
+  --arc-duration-fast: 0.2s;
+  --arc-duration-base: 0.3s;
+  --arc-duration-slow: 0.5s;
+
+  /* ── Warna state (dari palet brand) ── */
+  --arc-focus: #7c8f3a;         /* ring fokus keyboard         */
+  --arc-focus-soft: rgba(174, 189, 95, 0.35);
+  --arc-select-bg: rgba(174, 189, 95, 0.45);
+  --arc-select-ink: #181c11;
+}
+
+/* ── Fokus keyboard: SATU ring untuk seluruh situs ──
+   Hilangkan inkonsistensi outline default biru / tidak terlihat
+   di atas background gelap. :focus-visible hanya muncul untuk
+   navigasi keyboard, tidak mengganggu klik mouse/sentuh. */
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible{
+  outline: 2px solid var(--arc-focus);
+  outline-offset: 3px;
+  border-radius: 0.25rem;
+}
+
+/* Tombol pill: ring mengikuti bentuknya */
+.cta-btn:focus-visible{
+  outline: 2px solid var(--arc-focus);
+  outline-offset: 3px;
+  border-radius: var(--arc-radius-pill);
+}
+
+/* ── Pressed state (umpan balik saat ditekan) ──
+   Sebelumnya tidak ada sama sekali — tombol terasa "mati". */
+.cta-btn:active{
+  transform: translateY(0) scale(0.97);
+  filter: brightness(0.96);
+}
+
+button:not(:disabled):active{
+  transform: scale(0.96);
+}
+
+/* ── Selection color merek ──
+   Detail kecil yang membuat halaman terasa "dirancang". */
+::selection{
+  background: var(--arc-select-bg);
+  color: var(--arc-select-ink);
+}
+
+/* ── Sentuhan mobile: hapus highlight biru saat tap,
+   hapus delay 300ms pada tombol & link ── */
+a, button, [role="button"]{
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+/* ── Anchor scroll: judul tidak tertutup header fixed ── */
+:target{ scroll-margin-top: 6rem; }
+
+/* ── Reduced motion: hormati preferensi pengguna ──
+   Guard global — halaman yang sudah punya aturan sendiri
+   tidak akan berperilaku lebih buruk dengan ini. */
+@media (prefers-reduced-motion: reduce){
+  *,
+  *::before,
+  *::after{
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
