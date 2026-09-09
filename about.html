@@ -900,6 +900,7 @@
   @media(max-width:767px){.ai-image-section{padding:2rem 1.25rem;}}
   .intern-frame{width:100%;max-width:100%;margin:0 auto;padding:0 2rem;}
   .intern-frame-inner{background:transparent;border:1px solid rgba(124,143,58,0.16);border-radius:24px;padding:3rem;display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;box-shadow:none;}
+  .intern-group-label{display:block;width:max-content;margin:0 auto 1.25rem;font-size:0.8rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#4c5a1e;background:rgba(124,143,58,0.14);border:1px solid rgba(124,143,58,0.25);padding:0.45rem 1.3rem;border-radius:999px;}
   .intern-carousel-controls{display:flex;justify-content:center;gap:0.6rem;margin-top:0.75rem;}
   .intern-carousel-button{display:grid;place-items:center;width:2.2rem;height:2.2rem;border:1px solid rgba(76,90,30,0.28);border-radius:50%;background:rgba(250,249,244,0.72);color:var(--moss-deep);font-size:1.15rem;line-height:1;cursor:pointer;}
   .intern-carousel-button:disabled{opacity:0.35;cursor:default;}
@@ -908,8 +909,7 @@
   .intern-card-photo{aspect-ratio:1/1;overflow:hidden;}
   .intern-card-photo img{width:100%;height:100%;object-fit:cover;display:block;}
   .intern-card-info{padding:1.4rem 1.1rem;text-align:center;}
-  .intern-card-info h3{font-family:'Bricolage Grotesque','Inter',sans-serif;font-size:1.2rem;font-weight:700;color:var(--paper-ink);margin:0 0 0.5rem;letter-spacing:-0.02em;}
-  .intern-card-role{display:inline-block;font-size:0.72rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:#4c5a1e;background:rgba(124,143,58,0.14);border:1px solid rgba(124,143,58,0.25);padding:0.35rem 0.9rem;border-radius:999px;}
+  .intern-card-info h3{font-family:'Bricolage Grotesque','Inter',sans-serif;font-size:1.2rem;font-weight:700;color:var(--paper-ink);margin:0;letter-spacing:-0.02em;}
   @media(max-width:900px){.intern-frame-inner{grid-template-columns:repeat(2,1fr);}}
   @media(max-width:520px){.intern-frame-inner{grid-template-columns:1fr;padding:1.5rem;}}
   @media(max-width:767px){
@@ -919,9 +919,9 @@
     .intern-card{flex:0 0 calc((100% - 0.65rem) / 2) !important;min-width:0;border-radius:14px;scroll-snap-align:start;}
     .intern-card-photo{aspect-ratio:3 / 4;background:rgba(238,241,223,0.72);overflow:hidden;}
     .intern-card-photo img{object-fit:cover;object-position:center;}
-    .intern-card-info{min-height:5.5rem;padding:0.75rem 0.45rem 0.85rem;display:flex;flex-direction:column;align-items:center;text-align:center;}
-    .intern-card-info h3{min-height:2.1rem;margin:0 0 0.45rem;font-size:0.82rem;line-height:1.2;text-align:center;}
-    .intern-card-role{margin:0 auto;font-size:0.5rem;line-height:1.25;text-align:center;}
+    .intern-card-info{min-height:auto;padding:0.85rem 0.45rem;flex-direction:column;align-items:center;justify-content:center;text-align:center;}
+    .intern-card-info h3{min-height:auto;margin:0;font-size:0.88rem;line-height:1.2;text-align:center;}
+    .intern-group-label{font-size:0.68rem;padding:0.35rem 1rem;margin-bottom:0.9rem;}
     .intern-carousel-controls{margin-top:0.6rem;}
     .intern-carousel-button{width:2rem;height:2rem;font-size:1rem;}
   }
@@ -1134,36 +1134,34 @@
           </div>
 
 
+
           <!-- Row 5: Anak Magang -->
           <div class="team-row team-row--interns reveal-on-scroll reveal-delay-4">
             <div class="intern-frame">
+              <span class="intern-group-label">Team IT</span>
               <div class="intern-frame-inner">
                 <article class="intern-card">
                   <div class="intern-card-photo"><img src="images/nofal.png" alt="Anggun HRMSR" loading="lazy" /></div>
                   <div class="intern-card-info">
                     <h3>Noufal</h3>
-                    <span class="intern-card-role">TEAM IT</span>
                   </div>
                 </article>
                 <article class="intern-card">
                   <div class="intern-card-photo"><img src="images/lutfi.png" alt="Wildan Andriawan" loading="lazy" /></div>
                   <div class="intern-card-info">
                     <h3>Lutfi</h3>
-                    <span class="intern-card-role">TEAM IT</span>
                   </div>
                 </article>
                 <article class="intern-card">
                   <div class="intern-card-photo"><img src="images/fadil.png" alt="Rahma Almira" loading="lazy" /></div>
                   <div class="intern-card-info">
                     <h3>Fadil</h3>
-                    <span class="intern-card-role">TEAM IT</span>
                   </div>
                 </article>
                 <article class="intern-card">
                   <div class="intern-card-photo"><img src="images/magang4.jpeg" alt="Piti Astley" loading="lazy" /></div>
                   <div class="intern-card-info">
                     <h3>Piti Astley</h3>
-                    <span class="intern-card-role">TEAM IT</span>
                   </div>
                 </article>
               </div>
