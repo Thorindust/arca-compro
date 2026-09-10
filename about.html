@@ -807,7 +807,7 @@
     .values-grid{ grid-template-columns:repeat(2,minmax(0,1fr));gap:0.5rem; }
     .value-card{ min-height:13rem;padding:1rem 0.8rem;border-radius:16px; }
     .value-card h3{ font-size:clamp(1.35rem,6vw,2rem); }
-    .value-description{ font-size:0.68rem;line-height:1.5; }
+    .value-description{ font-size:0.68rem;line-height:1.5; }
     .team-heading,.proof-heading,.timeline-heading{ gap:0.75rem; }
     .team-heading h2,.proof-heading h2,.timeline-heading h2{ font-size:clamp(1.8rem,8vw,2.8rem); }
     .team-heading-copy,.proof-heading-copy,.timeline-heading-copy{ max-width:12rem;font-size:0.68rem;line-height:1.5; }
@@ -900,9 +900,9 @@
   .ai-image-placeholder span{font-size:1.1rem;font-weight:600;opacity:.7;}
   .ai-image-placeholder small{opacity:.5;font-size:.85rem;}
   @media(max-width:767px){.ai-image-section{padding:2rem 1.25rem;}}
-  .intern-frame{width:100%;max-width:100%;margin:0 auto;padding:0 2rem;}
-  .intern-frame-inner{background:transparent;border:1px solid rgba(124,143,58,0.16);border-radius:24px;padding:3rem;display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;box-shadow:none;}
-  .intern-group-label{display:block;width:max-content;margin:0 auto 1.25rem;font-size:0.8rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#4c5a1e;background:rgba(124,143,58,0.14);border:1px solid rgba(124,143,58,0.25);padding:0.45rem 1.3rem;border-radius:999px;}
+  .intern-frame{width:100%;max-width:100%;margin:0 auto;padding:clamp(1.5rem,3vw,2.5rem);border:1px solid rgba(124,143,58,0.16);border-radius:24px;background:linear-gradient(145deg,rgba(247,247,242,0.55),rgba(238,241,223,0.45));}
+  .intern-frame-inner{background:transparent;border:0;border-radius:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;box-shadow:none;}
+  .intern-group-label{display:block;width:max-content;margin:0 auto 1.5rem;font-family:'Bricolage Grotesque','Inter',sans-serif;font-size:clamp(1.5rem,2.6vw,2.1rem);font-weight:800;letter-spacing:-0.03em;text-transform:uppercase;color:var(--moss-deep);line-height:1;}
   .intern-carousel-controls{display:flex;justify-content:center;gap:0.6rem;margin-top:0.75rem;}
   .intern-carousel-button{display:grid;place-items:center;width:2.2rem;height:2.2rem;border:1px solid rgba(76,90,30,0.28);border-radius:50%;background:rgba(250,249,244,0.72);color:var(--moss-deep);font-size:1.15rem;line-height:1;cursor:pointer;}
   .intern-carousel-button:disabled{opacity:0.35;cursor:default;}
@@ -915,7 +915,7 @@
   @media(max-width:900px){.intern-frame-inner{grid-template-columns:repeat(2,1fr);}}
   @media(max-width:520px){.intern-frame-inner{grid-template-columns:1fr;padding:1.5rem;}}
   @media(max-width:767px){
-    .intern-frame{padding:0;overflow:hidden;}
+    .intern-frame{padding:1.25rem 0.75rem 1rem;overflow:hidden;}
     .intern-frame-inner{display:flex !important;grid-template-columns:none !important;gap:0.65rem;padding:0.75rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;}
     .intern-frame-inner::-webkit-scrollbar{display:none;}
     .intern-card{flex:0 0 calc((100% - 0.65rem) / 2) !important;min-width:0;border-radius:14px;scroll-snap-align:start;}
@@ -923,7 +923,7 @@
     .intern-card-photo img{object-fit:cover;object-position:center;}
     .intern-card-info{min-height:auto;padding:0.85rem 0.45rem;flex-direction:column;align-items:center;justify-content:center;text-align:center;}
     .intern-card-info h3{min-height:auto;margin:0;font-size:0.88rem;line-height:1.2;text-align:center;}
-    .intern-group-label{font-size:0.68rem;padding:0.35rem 1rem;margin-bottom:0.9rem;}
+    .intern-group-label{font-size:clamp(1.15rem,5.5vw,1.5rem);padding:0;margin-bottom:0.9rem;}
     .intern-carousel-controls{margin-top:0.6rem;}
     .intern-carousel-button{width:2rem;height:2rem;font-size:1rem;}
   }
@@ -1106,11 +1106,10 @@
           <!-- Row 3: 1 Project Manager -->
           <div class="team-row team-row--1 reveal-on-scroll reveal-delay-2">
             <article class="team-card team-card--manager">
-              <div class="team-card-media"><img src="images/project-manager.jpeg" alt="Project Manager" loading="lazy" /></div>
+              <div class="team-card-media"><img src="images/gelora.png" alt="Project Manager" loading="lazy" /></div>
               <div class="team-card-info">
-                <h3 class="font-display">[Name to be added]</h3>
+                <h3 class="font-display">GELORA</h3>
                 <p class="team-card-role">Project Manager</p>
-                <p>Replace with a verified short bio covering this person's craft and role at ARCA.</p>
               </div>
             </article>
           </div>
@@ -1118,49 +1117,48 @@
           <!-- Row 4: 2 Content Creators -->
           <div class="team-row team-row--2 reveal-on-scroll reveal-delay-3">
             <article class="team-card team-card--content">
-              <div class="team-card-media"><img src="images/WhatsApp Image 2026-09-09 at 14.00.08.jpeg" alt="Content Creator" loading="lazy" /></div>
+              <div class="team-card-media"><img src="images/indra (2).png" alt="Content Creator" loading="lazy" /></div>
               <div class="team-card-info">
                 <h3 class="font-display">INDRA</h3>
                 <p class="team-card-role">Content Creator</p>
-                <p>Replace with a verified short bio covering this person's craft and role at ARCA.</p>
               </div>
             </article>
             <article class="team-card team-card--content">
-              <div class="team-card-media"><img src="images/konten-kreator-wanita.jpeg" alt="Content Creator" loading="lazy" /></div>
+              <div class="team-card-media"><img src="images/adyaa.png" alt="Content Creator" loading="lazy" /></div>
               <div class="team-card-info">
                 <h3 class="font-display">ADYA</h3>
                 <p class="team-card-role">Content Creator</p>
-                <p>Replace with a verified short bio covering this person's craft and role at ARCA.</p>
               </div>
             </article>
           </div>
 
 
 
-          <!-- Row 5: Creative Team (2) & Lead KOL (1) -->
-          <div class="team-row team-row--3 reveal-on-scroll reveal-delay-4">
-            <article class="team-card team-card--content">
-              <div class="team-card-media"><img src="images/placeholder-person.svg" alt="Creative Team" loading="lazy" /></div>
-              <div class="team-card-info">
-                <h3 class="font-display">[Nama Creative Team 1]</h3>
-                <p class="team-card-role">Creative Team</p>
-                <p>Replace with a verified short bio covering this person's craft and role at ARCA.</p>
-              </div>
-            </article>
-            <article class="team-card team-card--content">
-              <div class="team-card-media"><img src="images/placeholder-person.svg" alt="Creative Team" loading="lazy" /></div>
-              <div class="team-card-info">
-                <h3 class="font-display">[Nama Creative Team 2]</h3>
-                <p class="team-card-role">Creative Team</p>
-                <p>Replace with a verified short bio covering this person's craft and role at ARCA.</p>
-              </div>
-            </article>
+          <!-- Row 5: Lead KOL (1) — di atas Creative Team -->
+          <div class="team-row team-row--1 reveal-on-scroll reveal-delay-4">
             <article class="team-card team-card--manager">
-              <div class="team-card-media"><img src="images/placeholder-person.svg" alt="Lead KOL" loading="lazy" /></div>
+              <div class="team-card-media"><img src="images/yoga.png" alt="Lead KOL" loading="lazy" /></div>
               <div class="team-card-info">
-                <h3 class="font-display">[Nama Lead KOL]</h3>
+                <h3 class="font-display">YOGA</h3>
                 <p class="team-card-role">Lead KOL</p>
-                <p>Replace with a verified short bio covering this person's craft and role at ARCA.</p>
+              </div>
+            </article>
+          </div>
+
+          <!-- Row 5b: Creative Team (2) -->
+          <div class="team-row team-row--2 reveal-on-scroll reveal-delay-4">
+            <article class="team-card team-card--content">
+              <div class="team-card-media"><img src="images/adi.png" alt="Creative Team" loading="lazy" /></div>
+              <div class="team-card-info">
+                <h3 class="font-display">ADI</h3>
+                <p class="team-card-role">Creative Team</p>
+              </div>
+            </article>
+            <article class="team-card team-card--content">
+              <div class="team-card-media"><img src="images/arya.png" alt="Creative Team" loading="lazy" /></div>
+              <div class="team-card-info">
+                <h3 class="font-display">ARYA</h3>
+                <p class="team-card-role">Creative Team</p>
               </div>
             </article>
           </div>
@@ -1168,7 +1166,7 @@
           <!-- Row 6: Anak Magang -->
           <div class="team-row team-row--interns reveal-on-scroll reveal-delay-4">
             <div class="intern-frame">
-              <span class="intern-group-label">Team IT</span>
+              <span class="intern-group-label">IT Team</span>
               <div class="intern-frame-inner">
                 <article class="intern-card">
                   <div class="intern-card-photo"><img src="images/nofal.png" alt="Anggun HRMSR" loading="lazy" /></div>
@@ -1189,9 +1187,9 @@
                   </div>
                 </article>
                 <article class="intern-card">
-                  <div class="intern-card-photo"><img src="images/magang4.jpeg" alt="Piti Astley" loading="lazy" /></div>
+                  <div class="intern-card-photo"><img src="images/jason.png" alt="Piti Astley" loading="lazy" /></div>
                   <div class="intern-card-info">
-                    <h3>Piti Astley</h3>
+                    <h3>Jason</h3>
                   </div>
                 </article>
               </div>
